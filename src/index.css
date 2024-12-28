@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'DIN Next', sans-serif;
+  min-width: 360px;
+  background: #0F1923;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Tungsten Bold', sans-serif;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Tungsten Bold";
+    src: url("/fonts/Tungsten.woff2") format("woff2"), url("/fonts/Tungsten.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "DIN Next";
+    src: url("/fonts/DINNextW1G.woff2") format("woff2"),
+      url("/fonts/DINNextW1G.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
