@@ -29,6 +29,9 @@ export default {
       width: {
         '50%-10px': 'calc(50% - 10px)',
         '33.33%-20px': 'calc(33.33% - 27px)',
+      },
+      objectPosition: {
+        'center-top': '50% 0%',
       }
     },
   },
