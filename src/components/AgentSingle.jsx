@@ -13,7 +13,7 @@ const AgentSingle = () => {
   }
 
   return (
-    <section className="py-32 md:relative md:min-h-screen md:flex md:flex-wrap md:items-center">
+    <section className="py-32 md:relative md:overflow-hidden md:min-h-screen md:flex md:flex-wrap md:items-center">
       <div className="md:absolute md:inset-0 md:-z-[1]">
         <img
           src={agent.fullPortraitV2}

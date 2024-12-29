@@ -18,41 +18,37 @@ const AgentsListing = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  if (data && data.length > 0) {
-    function initAnimation() {
-      const agentCardCols = document.querySelectorAll('.agent-card-col');
-      if(!agentCardCols) {
+  useEffect(() => {
+    if (data && data.length > 0) {
+      const agentCardCols = document.querySelectorAll(".agent-card-col");
+      if (!agentCardCols) {
         return;
       }
       agentCardCols.forEach((agentCardCol) => {
-        useGSAP(() => {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: agentCardCol,
-              start: "top 95%",
-              end: "top 20%",
-              toggleActions: 'restart none none reverse',
-              markers: false,
-            },
-          })
-          tl.fromTo(
-            agentCardCol,
-            {
-              y: 200,
-              opacity: 0,
-            },
-            {
-              y: 0,
-              opacity: 1,
-              duration: 1,
-            }
-          );
-        }, {});
-      })
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: agentCardCol,
+            start: "top 95%",
+            end: "top 20%",
+            toggleActions: "restart none none reverse",
+            markers: false,
+          },
+        });
+        tl.fromTo(
+          agentCardCol,
+          {
+            y: 200,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+          }
+        );
+      });
     }
-    initAnimation();
-
-  }
+  }, [data]);
 
   return (
     <section className="py-40">
